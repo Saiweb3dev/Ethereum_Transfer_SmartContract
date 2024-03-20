@@ -63,4 +63,11 @@ contract TransferETH {
     function stop() public isOwner {
         stopped = true;
     }
+    
+     /**
+      * @dev Get the Owner of the contract
+      */
+    function getOwner() public view returns(address){
+        return owner;
+    }
 }

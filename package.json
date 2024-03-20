@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "chai-as-promised": "^7.1.1",
     "hardhat": "^2.22.1",
     "hardhat-deploy": "^0.12.2"
   }
