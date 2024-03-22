@@ -13,5 +13,8 @@
     "chai-as-promised": "^7.1.1",
     "hardhat": "^2.22.1",
     "hardhat-deploy": "^0.12.2"
+  },
+  "dependencies": {
+    "ethers": "^6.11.1"
   }
 }
