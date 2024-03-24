@@ -10,6 +10,9 @@ import "hardhat/console.sol";
  * The contract can be stopped by the owner in case of an emergency.
  */
 contract TransferETH {
+
+    error AddressInvalid();
+
     address payable private owner;
     address payable private receiver;
     bool private stopped = false;
@@ -47,8 +50,12 @@ contract TransferETH {
      * @dev Function to set the receiver address.
      * @param _receiver The address to set as the receiver.
      */
-    function setReceiver(address payable _receiver) public isOwner {
+    function setReceiver(address payable _receiver) public isOwner returns(address) {
+        if(_receiver == address(0)) {
+            revert AddressInvalid();
+        }
         receiver = _receiver;
+        return receiver;
     }
 
     /**
@@ -56,6 +63,7 @@ contract TransferETH {
      * The function can only be called by the owner and will fail if the contract is stopped.
      */
     function transferFund() public payable stopInEmergency isOwner {
+        //Transfer acc local 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
         require(address(this).balance >= msg.value, "Insufficient contract balance");
         require(receiver != address(0), "Receiver address not set"); // Ensure receiver address is set
         bool txHistory = receiver.send(msg.value);

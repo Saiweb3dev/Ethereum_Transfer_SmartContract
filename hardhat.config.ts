@@ -10,6 +10,7 @@ const config: HardhatUserConfig = {
   networks:{
     hardhat:{
       chainId:31337,
+      showRevertReason: true,
     },
     sepolia: {
       url: SEPOLIA_RPC_URL,
