@@ -8,11 +8,14 @@
       "inputs": []
     },
     {
+<<<<<<< HEAD
       "type": "error",
       "name": "AddressInvalid",
       "inputs": []
     },
     {
+=======
+>>>>>>> bf1b7360cb673f99cd3a406d36a8d280e0cf7c79
       "type": "event",
       "anonymous": false,
       "name": "TransferFailed",
@@ -99,12 +102,16 @@
           "name": "_receiver"
         }
       ],
+<<<<<<< HEAD
       "outputs": [
         {
           "type": "address",
           "name": ""
         }
       ]
+=======
+      "outputs": []
+>>>>>>> bf1b7360cb673f99cd3a406d36a8d280e0cf7c79
     },
     {
       "type": "function",
