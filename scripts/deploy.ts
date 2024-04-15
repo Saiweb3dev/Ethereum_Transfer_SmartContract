@@ -11,7 +11,7 @@ async function main(){
 
   const abi = TransferFactory.interface.formatJson();
   const abiFormated = JSON.parse(abi);
-  console.log(abiFormated)
+  // console.log(abiFormated)
   // work in here of sending the abi properly
   await hre.deployments.save("TransferETH",{
     abi:abiFormated,
