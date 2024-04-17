@@ -1,0 +1,25 @@
+{
+  "address": "0x89Bb457B8C2A4c302050307e6D77c8053d2763B2",
+  "abi": [
+    {
+      "type": "function",
+      "name": "transferFund",
+      "constant": false,
+      "stateMutability": "payable",
+      "payable": true,
+      "inputs": [
+        {
+          "type": "address",
+          "name": "receiverAddress"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "bool",
+          "name": ""
+        }
+      ]
+    }
+  ],
+  "numDeployments": 1
+}
